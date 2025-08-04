@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  background: #fc2923;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  
+  
+  /* Código para poner un cursor personalizado*/
+ /* cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"), auto; */
+
+}
+
+
+#contenedor {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#tituloPagina {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-family: monospace;
+}
+
+#tituloPagina::after {
+  content: "Este es un predictor de su futuro romántico basado en las canciones más importantes de las bandas más reconocidas del pop punk de principios de los 2000. Siga y disfrute.";
+  position: absolute;
+  width: 20%;
+  left: 70%;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#tituloPagina:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+#foto {
+ height: 300px;
+  border: white groove 7px;
+  border-radius: 5%;
+  margin-top: 15px;
+}
+
+.tituloPrediccion {
+  font-size: 2em;
+  font-family: "Copperplate", sans-serif;
+}
+
+.prediccion {
+  font-size: 1.5em;
+  font-family: "Courier New", monospace;
+}
+
+.prediccion::first-letter {
+  text-transform: uppercase;
+}
+
+#boton {
+  font-size: 0.9em;
+  font-family: "Papyrus", fantasy;
+  border: none;
+  background-color: black;
+  color: white;
+  margin-bottom: 2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+#boton:hover {
+  background-color: white;
+  color: black;
+}
