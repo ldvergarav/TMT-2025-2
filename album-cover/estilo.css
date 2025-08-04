@@ -1,0 +1,240 @@
+/* Esto es un comentario de CSS, la forma de escribirlo es distinta a la de HTML pero la función es la misma.
+
+En el CSS los elementos del HTML se identifican por tipos y atributos como la clase ('class') y el ID. 
+Cada sección que empieza con un nombre seguido de {} modifica el estilo de uno o varios elementos del HTML.
+
+Las clases se definen con . seguido del nombre. Ej.: .parrafo
+Los IDs se definen con # seguido del nombre. Ej.: #parrafo-rojo
+*/
+
+/*
+Importar una fuente desde fonts.google.com
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Danfo&display=swap");
+
+body {
+  font-family: monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "ELSH" 0;
+  text-align: center;
+}
+
+#bg { /*fondo*/
+  position: relative;
+  width: 50vh;
+  height: 50vh;
+  margin: 0 auto;
+  background-image: linear-gradient(#254c6b, #0f2f46, #151B29);
+}
+
+#door { /*forma y fondo de la puerta con su reflejo*/
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  height: 35%;
+  background-image: linear-gradient(to bottom right, #a1a896, #959a8b, #5c635c);
+  clip-path: polygon(0% 0%, 100% 0%, 97% 45%, 100% 100%, 0% 100%, 3% 45%);
+}
+
+.door-tex { /*forma de texturas de la puerta*/
+  position: absolute;
+  border: 1px solid #5c635c;
+  background: linear-gradient(to bottom right, #afb5a6, #a1a896, #5c635c);
+}
+
+.door-tex-up { /*texturas superiores puerta original*/
+  width: 33%;
+  height: 15%;
+  clip-path: polygon(3% 0%, 98% 0%, 100% 100%, 0% 100%);
+}
+
+.door-tex-down { /*texturas inferiores puerta original*/
+  width: 36.5%;
+  height: 16%;
+  clip-path: polygon(3% 0%, 96.7% 0%, 100% 100%, 0% 100%);
+}
+
+/*posición texturas puerta.
+se nombran de la puerta original primero la textura superior izquierda, superior derecha, inferior izquierda, inferior dercha.
+luego estan las texturas reflejadas en el mismo orden*/
+#door-tex-1 {left: 10%; top: 47%;}
+#door-tex-2 {left: 55%; top: 47%;}
+#door-tex-3 {left: 8%; top: 71%;}
+#door-tex-4 {left: 53.9%; top: 71%;}
+#door-tex-1r {left: 10%; top: 43%; transform: scaleY(-1); transform-origin: top;}
+#door-tex-2r {left: 55%; top: 43%; transform: scaleY(-1); transform-origin: top;}
+#door-tex-3r {left: 8%; top: 17%; transform: scaleY(-1); transform-origin: top;}
+#door-tex-4r {left: 53.1%; top: 17%; transform: scaleY(-1); transform-origin: top;}
+
+#door-handle { /*manija de la puerta*/
+  position: absolute;
+  left: 46%;
+  top: 89.2%;
+  background: rgba(37,42,46,0.75);
+  height:8%;
+  width: 6%;
+  border-radius: 50%;
+}
+
+#water-line-outline { /*linea de agua*/
+  position: absolute;
+  width: 100%;
+  height: 15.6%;
+  border-bottom: solid #244b6a 2px;
+}
+
+#water-line-door { /*linea de reflejo de la puerta en el agua*/
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  border-bottom: solid #5e6454 1px;
+}
+
+#body-size { /*no se ve, pero es para poder contener el cuerpo en relación al fondo
+  y poder moverlo de lugar o de tamaño más fácil*/
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  left: 20%;
+  top: 53%;
+}
+
+.billie-body { /*color del cuerpo*/
+  position: absolute;
+  background: #0a0d14;
+}
+  
+#billie-torso { /*forma y posicion del torso*/
+  width: 40%;
+  height: 35%;
+  left: 32%;
+  top: 47.5%;
+}
+
+.billie-limbs { /*forma y tamaño de las extremidades*/
+  width: 60%;
+  height: 42%;
+  clip-path: polygon(0% 70%, 18% 13%, 50% 25%, 55% 50%, 28% 43%, 10% 90%);
+  
+}
+
+/*posición de las extremidades*/
+#left-leg {left: 62%; top: 8%; transform: rotate(-17deg);}
+#right-leg {left: 66%; top: 44%; transform: rotate(2deg);}
+#left-arm {left: 2%; top: 45%; transform: rotate(96deg);}
+#right-arm {left: -12%; top: 70%; transform: rotate(-200deg)}
+
+.skin { /*color de la piel*/
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #C0BCAF, #9C9583, #403F35);
+}
+
+#billie-head { /*posicion y forma de cabeza*/
+  left: 19%;
+  top: 44%;
+  height:24%;
+  width: 15.5%;
+  border-radius: 50%;
+  transform: rotate(15deg);
+}
+
+.feet{ /*forma de pies*/
+  width: 5.5%;
+  height: 8%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 30%;
+}
+
+/*posición de pies*/
+#left-feet {left: 91%; top: 17%; transform: rotate(47deg)}
+#right-feet {left: 96%; top: 55%; transform: rotate(67deg)}
+
+.hands{ /*forma de manos*/
+  width: 7.5%;
+  height: 10%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  border-radius: 30%;
+}
+
+/*posición de manos*/
+#left-hand {left: 25%; top: 7%; transform: rotate(-47deg)}
+#right-hand {left: 15%; top: 90%; transform: rotate(70deg)}
+
+#hair { /*cabello*/
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #402926, #33211F, #291715);
+  left: 20%;
+  top: 44%;
+  height:47%;
+  width: 13%;
+  border-radius: 35%;
+  transform: rotate(-25deg);
+}
+
+.little-bubbles { /*forma, tamaño y color de las burbujas pequeñas*/
+  position: absolute;
+  width: 1%;
+  height: 1%;
+  background: white;
+  border-radius: 50%;
+}
+
+/*posición burbujas pequeñas*/
+#b1 {left: 35%; top: 60%;}
+#b2 {left: 37%; top: 65%;}
+#b3 {left: 32%; top: 50%;}
+#b4 {left: 34%; top: 57%;}
+#b5 {left: 32%; top: 23%;}
+#b6 {left: 30%; top: 30%;}
+#b7 {left: 38%; top: 40%;}
+#b8 {left: 37%; top: 43%;}
+#b9 {left: 38%; top: 22%;}
+#b10 {left: 35%; top: 28%;}
+#b11 {left: 38%; top: 58%;}
+#b12 {left: 33%; top: 38%;}
+
+.mini-bubbles { /*forma, tamaño y color de las burbujas miniatura*/
+  position: absolute;
+  width: 0.8%;
+  height: 0.6%;
+  background: #B4C5D0;
+  border-radius: 50%;
+}
+
+/*posición burbujas miniatura*/
+#mb1 {left: 33%; top: 62%;}
+#mb2 {left: 37%; top: 35%;}
+#mb3 {left: 32%; top: 20%;}
+#mb4 {left: 34%; top: 37%;}
+#mb5 {left: 38%; top: 28%;}
+#mb6 {left: 30%; top: 15%;}
+#mb7 {left: 28%; top: 13%;}
+#mb8 {left: 37%; top: 12%;}
+#mb9 {left: 35%; top: 47%;}
+#mb10 {left: 35%; top: 18%;}
+#mb11 {left: 41%; top: 42%;}
+#mb12 {left: 39%; top: 50%;}
+
+.water-slicks { /*forma, tamaño y color de los reflejos del agua*/
+  position: absolute;
+  width: 8%;
+  height: 1.1%;
+  background: linear-gradient(to bottom right, #9BB1C0, #7595A9, #58778C);
+  border-radius: 35% 50% 18% 40%;
+}
+
+/*posición reflejos del agua*/
+#w1 {left: 80%; top: 13%; transform: rotate(4deg)}
+#w2 {left: 10%; top: 8%; transform: rotate(-8deg)}
+#w3 {left: 85%; top: 4%; transform: rotate(-3deg)}
+#w4 {left: 90%; top: 9%; transform: rotate(3deg)}
+#w5 {left: 5%; top: 2%; transform: rotate(2deg)}
+
+/* Para ubicar un elemento dentro de otro en una posición específica darle al contenedor 
+una posición relativa (position: relative) y al contenido una posición absoluta 
+(position: absolute). 
+Luego, ubicar el contenido con las propiedades 'top', 'left', 'right' o 'bottom, que mueven
+el contenido x cantidad a partir de esos puntos de referencia.'*/
