@@ -20,7 +20,7 @@ const posts = [
     type: "Ensayo",
     date: "jul. 24, 2023",
     title: "Del optimismo en los relatos del terror: Las declaraciones de Salvatore Mancuso en la JEP como una oportunidad para la restauración de derechos y reparación de las víctimas del conflicto armado en Colombia",
-    thumbnail: "https://cdn.glitch.global/7141998e-ade9-4dcf-b6e6-c8043aa58702/mancuso.webp?v=1741841430035",
+    thumbnail: "/TMT-2025-2/portafolio/assets/Salvatore-Mancuso-JEP.jpg",
     description: "Ensayo argumentativo sobre las oportunidades de la inclusión del ex-paramilitar Salvatore Mancuso en la Justicia Especial para la Paz.",
     url:"escritos/ensayos/20230724-mancuso-jep.html",
   },
@@ -28,7 +28,7 @@ const posts = [
     type: "Reseña",
     date: "ene. 30, 2023",
     title: "Matuna: la sombra del guerrero. Entre los diálogos y las tensiones de la interculturalidad",
-    thumbnail: "https://cdn.glitch.global/7141998e-ade9-4dcf-b6e6-c8043aa58702/matuna.jpg?v=1741841372414",
+    thumbnail: "/TMT-2025-2/portafolio/assets/Matuna.jpg",
     description: "Reseña sobre la película Matuna: la sombra del guerrero en clave antropológica.",
     url:"escritos/reseñas/20230130-matuna-interculturalidad.html",
   }
