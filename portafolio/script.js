@@ -4,7 +4,7 @@ const posts = [
     type: "Artículo",
     date: "feb. 13, 2025",
     title: '"Las cuchas tienen razón" y no debemos olvidarnos de ello',
-    thumbnail: "https://cdn.glitch.global/7141998e-ade9-4dcf-b6e6-c8043aa58702/mural-cuchas.jpeg?v=1741662588091",
+    thumbnail: "/TMT-2025-2/portafolio/assets/Mural-Cuchas-Tenian-Razon.HEIC",
     description: "El mural de 'Las cuchas tienen razón' ha generado disputas entre la ciudadanía y ha vuelto a abrir una conversación sobre los desaparecidos en La Escombrera por la Operación Orión.",
     url: "escritos/articulos/20250213-las-cuchas-tienen-razon-sin-olvido.html",
   },
